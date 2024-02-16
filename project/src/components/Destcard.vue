@@ -1,14 +1,58 @@
 <template>
     <div>
-        <h2>{{ Destination.name }}</h2>
+      <h1>Buy your consoles here!!</h1>
+      <ul>
+        <li v-for="(console, index) in consoles" :key="index">
+          <img :src="console.img" :alt="console.name + ' Image'" class="console-img">
+        </li>
+      </ul>
     </div>
-</template>
+  </template>
+  
+<script>
+export default {
+    data() {
+        return {
+            consoles: [
+                {
+                    name: 'PlayStation 5',
+                    price: 449.99,
+                    Controller: true,
+                    img: "https://media.gamestop.com/i/gamestop/11108141?$pdp2x$"
+                },
+                {
+                    name: 'Xbox',
+                    price: 449.99,
+                    Controller: true,
+                    img: "https://media.gamestop.com/i/gamestop/11108371?$pdp2x$"
+                },
+                {
+                    name: 'Nintendo Switch',
+                    price: 259.99,
+                    Controller: true,
+                    img: "https://media.gamestop.com/i/gamestop/11095819?$pdp2x$"
+                },
+                {
+                    name: 'Steam Deck',
+                    price: 278.99,
+                    Controller: true,
+                    img: "https://media.gamestop.com/i/gamestop/20003488-1?$pdp2x$"
+                },
+                {
+                    name: 'ROG ally',
+                    price: 888.99,
+                    Controller: true,
+                    img: "https://www.zoro.com/static/cms/product/large/DH%20Commerce%20dba%20Streamline%20Distributors_6542964cv16dxxxx1xxxx788028.jpeg"
+                }
+            ]
+        };
+    }
+};
 
-<script setup>
-import Destcard from 
-const props = defineProps ({
-    Destination: Object,
-});
+
+
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>
